@@ -87,20 +87,17 @@ def plotAnalise():
 
     #Primeiro Gráfico
     fig = plt.figure()
-    ax = fig.add_subplot(111)
+    ax = fig.add_subplot(211)
     ax.plot(geracao, fitness)
+    plt.title("Grafico de Gerações por Fitness")
     ax.set_xlabel('Geraçoes')
     ax.set_ylabel('Fitness')
-    plt.title("Grafico de Gerações por Fitness")
-
 
     #Segundo Gráfico
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.plot(geracao2, fitness2)
-    ax.set_xlabel('Geraçoes2')
-    ax.set_ylabel('Fitness2')
-    plt.title("Grafico2 de Gerações2 por Fitness2")
+    ax2 = fig.add_subplot(212)
+    ax2.plot(geracao2, fitness2)
+    ax2.set_xlabel('Geraçoes2')
+    ax2.set_ylabel('Fitness2')
 
     #Mostrar Gráficos
     plt.show()
